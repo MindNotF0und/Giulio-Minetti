@@ -7,6 +7,9 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+ <meta name="apple-mobile-web-app-title" content="Giulio Minetti">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ 
  
   <title>Giulio Minetti</title>
   
@@ -23,7 +26,6 @@
      <link rel="icon" type="image/png" sizes="32x32" href="/bio/img/apple-touch-icon.png">
      <link rel="icon" type="image/png" sizes="96x96" href="/bio/img/apple-touch-icon.png">
      <link rel="icon" type="image/png" sizes="16x16" href="/bio/img/apple-touch-icon.png">
-     <link rel="manifest" href="images/manifest.json">
      <link rel="shortcut icon" href="/bio/img/01.png" type="image/webp">
      <link rel="icon" href="/bio/img/01.png" type="image/webp">
      <link rel="canonical" href="index.html"/>
@@ -124,30 +126,9 @@
        
    </style>
    
-   <script>
-       if(("standalone" in window.navigator) && window.navigator.standalone){
-      
-          // If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
-          var noddy, remotes = false;
-          
-          document.addEventListener('click', function(event) {
-              
-              noddy = event.target;
-              
-              // Bubble up until we hit link or top HTML element. Warning: BODY element is not compulsory so better to stop on HTML
-              while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-                  noddy = noddy.parentNode;
-              }
-              
-              if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-              {
-                  event.preventDefault();
-                  document.location.href = noddy.href;
-              }
-          
-          },false);
-      }
-   </script>
+ <script>
+     
+ </script>
   
 </head>
 
