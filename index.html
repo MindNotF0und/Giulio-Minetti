@@ -130,23 +130,7 @@
 
  <body style="background-color:black">
  
-<p style="color:white; text-align: center">(<span id="age"></span>)</p>
-<script>
-        // Calculate age based on the date of birth
-        function calculateAge(dateOfBirth) {
-            var today = new Date();
-            var age = today.getFullYear() - dateOfBirth.getFullYear();
-            if (today.getMonth() < dateOfBirth.getMonth() || (today.getMonth() === dateOfBirth.getMonth() && today.getDate() < dateOfBirth.getDate())) {
-                age--;
-            }
-            return age;
-        }
 
-        // Insert age into the page
-        var dateOfBirth = new Date("1997-08-13"); // Replace with your date of birth
-        var age = calculateAge(dateOfBirth);
-        document.getElementById("age").textContent = age;
-    </script>
     
   <section>
 
@@ -154,7 +138,7 @@
    
     <img src="bio/img/01.png" alt="dp"/>
 
-     <h2>Giulio Minetti</h2> <p style="color:white; text-align: center">(<span id="age"></span>)</p>
+     <h2>Giulio Minetti (<span id="age"></span>)</h2>
 
       <p style="color:white; text-align: center">❤️16.01.15❤️<br>
       Happily Married 💍<br>
@@ -195,6 +179,23 @@
    </div>
 
   </section>
+  
+  <script>
+        // Calculate age based on the date of birth
+        function calculateAge(dateOfBirth) {
+            var today = new Date();
+            var age = today.getFullYear() - dateOfBirth.getFullYear();
+            if (today.getMonth() < dateOfBirth.getMonth() || (today.getMonth() === dateOfBirth.getMonth() && today.getDate() < dateOfBirth.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Insert age into the page
+        var dateOfBirth = new Date("1997-08-13"); // Replace with your date of birth
+        var age = calculateAge(dateOfBirth);
+        document.getElementById("age").textContent = age;
+    </script>
 
  </body>
 
