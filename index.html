@@ -130,13 +130,30 @@
 
  <body style="background-color:black">
 
+<script>
+
+function calculateAge(dateOfBirth) {
+var today = new Date();
+var age = today.getFullYear() - dateOfBirth.getFullYear();
+if (today.getMonth() < dateOfBirth.getMonth() || (today.getMonth() === dateOfBirth.getMonth() && today.getDate() < dateOfBirth.getDate())) {
+age--;
+}
+return age;
+}
+
+var dateOfBirth = new Date("1997-08-13");
+var age = calculateAge(dateOfBirth);
+document.getElementById("age").textContent = age;
+
+</script>
+
   <section>
 
    <div>
-
+   
     <img src="bio/img/01.png" alt="dp"/>
 
-     <h2>Giulio Minetti</h2>
+     <h2>Giulio Minetti</h2> <p>(<span id="age"></span>)</p>
 
       <p style="color:white; text-align: center">❤️16.01.15❤️<br>
       Happily Married 💍<br>
