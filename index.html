@@ -131,22 +131,22 @@
  <body style="background-color:black">
 
 <script>
+        // Calculate age based on the date of birth
+        function calculateAge(dateOfBirth) {
+            var today = new Date();
+            var age = today.getFullYear() - dateOfBirth.getFullYear();
+            if (today.getMonth() < dateOfBirth.getMonth() || (today.getMonth() === dateOfBirth.getMonth() && today.getDate() < dateOfBirth.getDate())) {
+                age--;
+            }
+            return age;
+        }
 
-function calculateAge(dateOfBirth) {
-var today = new Date();
-var age = today.getFullYear() - dateOfBirth.getFullYear();
-if (today.getMonth() < dateOfBirth.getMonth() || (today.getMonth() === dateOfBirth.getMonth() && today.getDate() < dateOfBirth.getDate())) {
-age--;
-}
-return age;
-}
-
-var dateOfBirth = new Date("1997-08-13");
-var age = calculateAge(dateOfBirth);
-document.getElementById("age").textContent = age;
-
-</script>
-
+        // Insert age into the page
+        var dateOfBirth = new Date("1997-08-13"); // Replace with your date of birth
+        var age = calculateAge(dateOfBirth);
+        document.getElementById("age").textContent = age;
+    </script>
+    
   <section>
 
    <div>
